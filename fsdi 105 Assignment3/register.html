@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Pet</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Register Your Pet</h1>
+        </header>
+        <main>
+            <form id="pet-form">
+                <div class="form-group">
+                    <label for="pet-name">Name:</label>
+                    <input type="text" class="form-control" id="pet-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="pet-age">Age:</label>
+                    <input type="number" class="form-control" id="pet-age" required>
+                </div>
+                <div class="form-group">
+                    <label for="pet-gender">Gender:</label>
+                    <input type="text" class="form-control" id="pet-gender" required>
+                </div>
+                <div class="form-group">
+                    <label for="pet-breed">Breed:</label>
+                    <input type="text" class="form-control" id="pet-breed" required>
+                </div>
+                <div class="form-group">
+                    <label for="pet-service">Service:</label>
+                    <select class="form-control" id="pet-service" required>
+                        <!-- Services will be dynamically populated here -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pet-type">Type:</label>
+                    <select class="form-control" id="pet-type" required>
+                        <option value="Dog">Dog</option>
+                        <option value="Cat">Cat</option>
+                        <option value="Bird">Bird</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="pet-color">Color:</label>
+                    <input type="text" class="form-control" id="pet-color" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Register Pet</button>
+            </form>
+            <div id="pet-notification" class="alert alert-success mt-3" style="display: none;">
+                Pet registered successfully!
+            </div>
+
+            <h2 class="mt-5">Registered Pets</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Breed</th>
+                        <th>Service</th>
+                        <th>Type</th>
+                        <th>Color</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="pet-list">
+                    <!-- Rows will be added dynamically here -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
